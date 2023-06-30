@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+body{
+    font-family: 'Segoe UI', 'Tahoma','Geneva',' Verdana', 'sans-serif';
+}
+.slid-con{
+    margin:10px auto;
+    width:800px;
+    height:250px;
+    position:relative;
+}
+.slid-con img{
+position:absolute;
+opacity:0;
+z-index: 1;
+transition:opacity 1s;
+width:100%;
+height: 100%;
+}
+.slid-con img.active{
+    opacity: 1;
+}
+.slid-con .slid-num{
+    position: absolute;
+    background-color:rgb(0,0,0,.6);
+    left:0;
+    top:0;
+    z-index:2;
+    padding:5px 10px;
+    color:#fff;
+    border-radius: 6px;
+
+}
+.slide-cont{
+    margin:auto;
+    width:800;
+    overflow: hidden;
+}
+.slide-cont .prev,
+.slide-cont .next{
+border-radius: 4px;
+width:20%;
+background-color: #009688;
+cursor: pointer;
+user-select: none;
+font-size: 16px;
+padding: 5px;
+color:#fff;
+}
+.slide-cont .prev{
+float: left;
+}
+.slide-cont .next{
+    float:right
+}
+.slide-cont .prev.disabled,
+.slide-cont .next.disabled{
+cursor: no-drop;
+background-color: rgba(0,150,136,.5);
+}
+.slide-cont .indicator{
+    width:60%;
+    float:left;
+}
+.slide-cont .indicator ul{
+    text-align: center;
+    margin:0;
+    list-style: none;
+
+}
+.slide-cont .indicator ul li{
+    display: inline-block ;
+    background-color: #f6f6f6;
+    color:#333;
+    height: 28px;
+    width:28px;
+    line-height: 28px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+    margin: 0 2px;
+}
+.slide-cont .indicator ul li.active{
+    color: #fff;
+    background-color: #009688;
+}
